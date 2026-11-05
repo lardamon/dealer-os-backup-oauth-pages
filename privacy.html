@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Dealer OS Backup</title>
+<meta name="description" content="Privacy Policy for Dealer OS Backup and its use of the Google Drive API.">
+<style>
+  body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; max-width: 720px; margin: 40px auto; padding: 0 20px; line-height: 1.6; color: #1f2328; }
+  nav a { margin-right: 16px; }
+  footer { margin-top: 48px; font-size: 0.9em; color: #57606a; }
+</style>
+</head>
+<body>
+<nav><a href="./">Home</a><a href="privacy.html">Privacy Policy</a></nav>
+
+<h1>Privacy Policy</h1>
+<p><em>Last updated: November 6, 2026</em></p>
+
+<p>This policy describes how <strong>Dealer OS Backup</strong> ("the application") accesses and handles Google user data. The application is a personal backup tool used only by its owner to back up the owner's own server data to the owner's own Google Drive.</p>
+
+<h2>Google data the application accesses</h2>
+<p>The application requests a single OAuth scope:</p>
+<ul>
+  <li><code>https://www.googleapis.com/auth/drive.file</code> — access only to files and folders that the application itself creates in Google Drive.</li>
+</ul>
+<p>The application cannot see, read or modify any other files in the Google Drive. It does not access Gmail, contacts, calendar, profile data or any other Google service.</p>
+
+<h2>How the data is used</h2>
+<ul>
+  <li>Google Drive access is used exclusively to upload, list, verify, download and delete the application's own backup files, i.e. for backup and restore.</li>
+  <li>All backup data is encrypted on the server by restic <strong>before</strong> it is sent to Google Drive. Only encrypted data is stored in Drive; the encryption password never leaves the server and is never sent to Google.</li>
+  <li>The data is not used for advertising, analytics, profiling, or training of AI/ML models, and is not sold.</li>
+</ul>
+
+<h2>Storage of OAuth tokens</h2>
+<p>OAuth access and refresh tokens are stored locally on the owner's server in the backup tool's configuration, with access restricted to the server owner. Tokens are not transmitted to any third party and are not stored in any external service.</p>
+
+<h2>Sharing</h2>
+<p>Google user data is not shared with, transferred to, or disclosed to any third party. The only parties involved are the owner's server and Google Drive itself.</p>
+
+<h2>Limited Use</h2>
+<p>The application's use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+
+<h2>Retention and deletion</h2>
+<p>Encrypted backups are kept in Google Drive according to the owner's retention settings and are removed when they are pruned or deleted. Access can be revoked at any time at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>; after revocation the application can no longer access Google Drive, and the locally stored tokens become invalid.</p>
+
+<h2>Changes</h2>
+<p>If this policy changes, the updated version will be published on this page with a new "Last updated" date.</p>
+
+<h2>Contact</h2>
+<p>Questions about this policy can be submitted via the <a href="https://github.com/lardamon/dealer-os-backup-oauth-pages/issues">project's GitHub repository</a>.</p>
+
+<footer><a href="./">Dealer OS Backup</a> · Privacy Policy</footer>
+</body>
+</html>

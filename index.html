@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dealer OS Backup</title>
+<meta name="description" content="Dealer OS Backup — a personal encrypted backup system that stores backups on Google Drive using restic and rclone.">
+<style>
+  body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; max-width: 720px; margin: 40px auto; padding: 0 20px; line-height: 1.6; color: #1f2328; }
+  h1 { margin-bottom: 0.2em; }
+  nav a { margin-right: 16px; }
+  footer { margin-top: 48px; font-size: 0.9em; color: #57606a; }
+</style>
+</head>
+<body>
+<nav><a href="./">Home</a><a href="privacy.html">Privacy Policy</a></nav>
+
+<h1>Dealer OS Backup</h1>
+<p>Dealer OS Backup is a personal, single-owner backup system. It creates encrypted backups of the owner's own server data and stores them in the owner's own Google Drive.</p>
+
+<h2>How it works</h2>
+<ul>
+  <li>Backups are made with <a href="https://restic.net/">restic</a>, which encrypts all data on the server <strong>before</strong> it is uploaded.</li>
+  <li><a href="https://rclone.org/">rclone</a> uploads the already-encrypted backup files to Google Drive using the Google Drive API.</li>
+  <li>The application requests only the <code>drive.file</code> scope, so it can access only the files and folders it created itself — not the rest of the Drive.</li>
+  <li>Google Drive access is used solely to store, list, verify and restore these backups.</li>
+</ul>
+
+<h2>Who it is for</h2>
+<p>This is not a public service. It is used only by its owner for their own data. There are no user accounts, no sign-up and no third-party users.</p>
+
+<p>See the <a href="privacy.html">Privacy Policy</a> for details on how Google user data is handled.</p>
+
+<footer>Dealer OS Backup · <a href="privacy.html">Privacy Policy</a></footer>
+</body>
+</html>
